@@ -1,5 +1,5 @@
 var roleUpgrader = {
-    name: 'builder',
+    name: 'upgrader',
     /** @param {Creep} creep **/
     run: (creep) => {
 

@@ -40,7 +40,7 @@ const creepsLogic = {
                 return creep.memory.role = roleHarvester.name;
             }
 
-            return creep.memory.role = roleBuilder.name;
+            return creep.memory.role = roleUpgrader.name;
         }
     },
 };
