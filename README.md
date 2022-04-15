@@ -2,7 +2,7 @@
 
 ## Utils
 
-You can use de utils function in the console. Example execute `require('utils').testUtil()`.
+You can use de utils function in the console. Example execute `require('-utils').createCreep()`.
 
 ## Notes
 

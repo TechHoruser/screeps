@@ -1,6 +1,7 @@
-var towerLogic = require('tower.logic');
+const towerLogic = require('./logic.tower');
+const spawnLogic = require('./logic.spawn');
 
-var structuresLogic = {
+const structuresLogic = {
     run: () => {
         Object.values(Game.structures).forEach(structure => {
             if(!structure.my) {
@@ -9,6 +10,10 @@ var structuresLogic = {
 
             if (structure.structureType === STRUCTURE_TOWER) {
                 return towerLogic.run(structure);
+            }
+
+            if (structure.structureType === STRUCTURE_SPAWN) {
+                return spawnLogic.run(structure);
             }
         });
     },

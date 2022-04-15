@@ -1,11 +1,12 @@
 const roleHarvester = require('./role.harvester');
 const roleUpgrader = require('./role.upgrader');
 const roleBuilder = require('./role.builder');
-const data = require('./data');
+const data = require('./-data');
 
 const creepsLogic = {
     run: () => {
         Object.values(Game.creeps).forEach(creep => {
+            // TODO order methods desassign assign run
             creepsLogic.runByRole(creep);
 
             creepsLogic.assignRole(creep);
