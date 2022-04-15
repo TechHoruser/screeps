@@ -2,7 +2,7 @@ const utils = {
     testUtil: () => {
         console.log('Util module is ok');
     },
-    makeid: (length) => {
+    makeId: (length = 5) => {
         var result             = '';
         const characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const charactersLength = characters.length;
@@ -13,7 +13,7 @@ const utils = {
     },
     createCreep: (skills = null) => {
         if (Object.keys(Game.spawns).length === 1) {
-            Game.spawns[Object.keys(Game.spawns)[0]].spawnCreep((skills ? skills : [WORK, CARRY, MOVE]), utils.makeid(5) );
+            Game.spawns[Object.keys(Game.spawns)[0]].spawnCreep((skills ? skills : [WORK, CARRY, MOVE]), utils.makeId());
         }
     },
 };
